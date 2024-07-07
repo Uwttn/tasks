@@ -11,15 +11,6 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 
-  <!-- Ready code -->
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <style>
-  #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
-  #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
-  </style>
-<!-- /Ready Code -->
- 
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>Task Board</title>
 </head>
@@ -33,6 +24,7 @@
     <div class="text-center mb-5">
       <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">Add Task</button>
     </div>
+
     <!-- Todo: Create a modal with a form to add tasks -->
     <div class="modal" tabindex="-1" id="formModal">
       <div class="modal-dialog">
@@ -43,21 +35,22 @@
           </div>
           <div class="modal-body">
             <div id="addTask">
-              <input type="text" placeholder="Add Task">
-              <input type="date" placeholder="Due Date">
+              <input type="text" placeholder="Add Task" id="task">
+              <input type="date" placeholder="Due Date" id="date">
             </div>
             <div id="description">
-              <textarea placeholder="Text Description"></textarea>
+              <textarea placeholder="Text Description" id="text"></textarea>
             </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-success">Save</button>
+            <button type="button" class="btn btn-primary" id="save">Save</button>
           </div>
         </div>
       </div>
     </div>
     <!-- ----------------------------------------------------------- -->
+
     <div class="row swim-lanes text-center justify-content-between">
       <div class="col-12 col-lg-4 d-flex">
         <div id="to-do" class="card border-light mb-3 lane flex-grow-1">
@@ -99,7 +92,7 @@
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
     integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
-    
+
   <script src="./assets/js/script.js"></script>
 </body>
 
