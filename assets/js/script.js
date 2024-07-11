@@ -23,12 +23,10 @@ function createTaskCard(task) {
 
 // Todo: create a function to render the task list and make cards draggable
 function renderTaskList() {
-    const taskList = JSON.parse(localStorage.getItem('info'));
-    if (taskList === null) {
-        $("task") = info.task,
-        $("date") = info.date,
-        $("text") = info.text,
-}
+    var elem =document.createElement("span")
+    $(elem).data("task");
+    $(elem).data("date");
+    $(elem).data("text");
 }
 
 // Todo: create a function to handle adding a new task
@@ -49,7 +47,5 @@ function handleDrop(event, ui) {
 
 // Todo: when the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
 $(document).ready(function (event) {
-    event.isDefaultPrevented();
-    saveTask();
-    renderTaskList();
+    event.preventDefault();
 });
