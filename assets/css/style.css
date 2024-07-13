@@ -25,10 +25,14 @@ body {
 
 .swim-lanes {
   min-height: 60vh;
+  position: relative;  /* Ensure relative positioning for proper stacking context */
+ 
 }
 
 .task-card {
   margin: auto;
+  position: relative; /* Ensure relative positioning for proper stacking context */
+  z-index: 0; /* Default z-index */
 }
 
 .task-card:hover {
